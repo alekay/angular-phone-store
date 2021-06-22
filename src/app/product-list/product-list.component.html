@@ -1,0 +1,32 @@
+<h2>Products</h2>
+
+<!-- add ngFor as sctructural directive - div reepats for each product in the list -->
+<div *ngFor="let product of products">
+  <!-- set title to be the product's name using [] binding -->
+  <!-- render the property value as text {{ product.name }} -->
+  <h3>
+    <!-- add router link to let the anchor direct to the product details by product ID -->
+    <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <!-- only create <p> element if current product has a description -->
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <!-- add a button so users can share a product -->
+  <button (click)="share()">
+    Share
+  </button>
+
+  <!-- display ProductAlertsComponent as child of ProductListComponent -->
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
