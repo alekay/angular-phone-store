@@ -30,7 +30,7 @@ export class CartComponent {
     window.alert('Your order has been submitted');
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
-    // navigate back to home page
+    // navigate back to home page after checkout
     this.router.navigate(['/']);
   }
 }

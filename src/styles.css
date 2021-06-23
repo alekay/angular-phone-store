@@ -84,16 +84,30 @@ label {
 }
 
 /* added home button styling */
-.home {
+.home, #home {
   display: inline-flex;
-  align-items: center;
   padding: 8px 16px;
+  position: relative;
+  left: 10%;
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  background-color:white;
+  background-color: #FFF;
   color: #1976d2;
   border: 2px solid black
+}
+
+/* desktop position */
+@media screen and (min-width: 768px) {
+  #home {
+    position: relative;
+    left: 35%;
+  }
+}
+
+/* TODO replace with PNG */
+.archerLogo {
+  display: none;
 }
 
 .button:hover, button:hover {
