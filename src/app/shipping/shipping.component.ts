@@ -7,9 +7,10 @@ import { CartService } from '../cart.service';
   templateUrl: './shipping.component.html',
   styleUrls: ['./shipping.component.css']
 })
-export class ShippingComponent {
-  shippingCosts = this.cartService.getShippingPrices();
 
+export class ShippingComponent {
   constructor(private cartService: CartService) { }
+  
+  shippingCosts = this.cartService.getShippingPrices();
 
 }

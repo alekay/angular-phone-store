@@ -7,11 +7,11 @@ import { Product } from './products';
 })
 
 export class CartService {
-  items: Product[] = [];
-
   constructor(
     private http: HttpClient
   ) {}
+
+  items: Product[] = [];
   
   addToCart(product: Product) {
     this.items.push(product);
@@ -30,5 +30,3 @@ export class CartService {
     return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
   }
 }
-
-
