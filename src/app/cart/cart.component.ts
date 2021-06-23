@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { CartService } from '../cart.service';
 
@@ -14,6 +15,7 @@ export class CartComponent {
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
+    private router: Router
     ) {}
   
   items = this.cartService.getItems();
@@ -28,5 +30,7 @@ export class CartComponent {
     window.alert('Your order has been submitted');
     console.warn('Your order has been submitted', this.checkoutForm.value);
     this.checkoutForm.reset();
+    // navigate back to home page
+    this.router.navigate(['/']);
   }
 }
