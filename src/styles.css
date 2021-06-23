@@ -12,12 +12,6 @@ body {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  
-}
-
 router-outlet + *  {
   padding: 0 16px;
 }
@@ -81,6 +75,12 @@ label {
   background-color: #1976d2;
   color: white;
   border: 2px solid black
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* added home button styling */

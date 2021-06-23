@@ -13,12 +13,12 @@ import { CartService } from '../cart.service';
 // define product property
 // then inject ActivatedRoute into the constructor
 export class ProductDetailsComponent implements OnInit {
+  product: Product | undefined;
+  
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
   ) {}
-
-  product: Product | undefined;
  
   addToCart(product: Product) {
     this.cartService.addToCart(product);

@@ -12,17 +12,17 @@ import { CartService } from '../cart.service';
 })
 
 export class CartComponent {
-  constructor(
-    private cartService: CartService,
-    private formBuilder: FormBuilder,
-    private router: Router
-    ) {}
-  
   items = this.cartService.getItems();
   checkoutForm = this.formBuilder.group({
     name: '',
     address: ''
   });
+  
+  constructor(
+    private cartService: CartService,
+    private formBuilder: FormBuilder,
+    private router: Router
+    ) {}
 
   onSubmit(): void {
     // Process checkout data here
