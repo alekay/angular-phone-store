@@ -1,10 +1,15 @@
-<h3>Shipping Prices</h3>
+<div class="detailContainer">
+  <h3>Shipping Prices</h3>
 
-<!-- link to go back to cart -->
-<p>
-  <a routerLink="/cart">Back to cart</a>
-</p>
-<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
-  <span>{{ shipping.type }}</span>
-  <span>{{ shipping.price | currency }}</span>
+  <!-- link to go back to cart or products -->
+  <p>
+    <a routerLink="/cart">Back to Cart </a>
+    /
+    <a href="/"> Back to Products</a>
+  </p>
+  
+  <div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+    <span>{{ shipping.type }}</span>
+    <span>{{ shipping.price | currency }}</span>
+  </div>
 </div>
