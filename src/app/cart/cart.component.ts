@@ -23,14 +23,18 @@ export class CartComponent {
     private formBuilder: FormBuilder,
     private router: Router
     ) {}
-
+    // if (this.items == []) {
+    //   console.warn('Your cart is empty')
+    // }
+    // else {}
   onSubmit(): void {
-    // Process checkout data here
-    this.items = this.cartService.clearCart();
-    window.alert('Your order has been submitted');
-    console.warn('Your order has been submitted', this.checkoutForm.value);
-    this.checkoutForm.reset();
-    // navigate back to home page after checkout
-    this.router.navigate(['/']);
+
+      // Process checkout data here
+      this.items = this.cartService.clearCart();
+      window.alert('Your order has been submitted');
+      console.warn('Your order has been submitted', this.checkoutForm.value);
+      this.checkoutForm.reset();
+      // navigate back to home page after checkout
+      this.router.navigate(['/']);
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { Product, products } from '../products';
 import { CartService } from '../cart.service';
@@ -17,12 +18,15 @@ export class ProductDetailsComponent implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) {}
  
   addToCart(product: Product) {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
+    // route to index after adding to cart
+    this.router.navigate(['/']);
   }
 
   ngOnInit() {
