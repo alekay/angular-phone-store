@@ -35,6 +35,6 @@ export class CartComponent {
       console.warn('Your order has been submitted', this.checkoutForm.value);
       this.checkoutForm.reset();
       // navigate back to home page after checkout
-      this.router.navigate(['/']);
+      // this.router.navigate(['/']);
   }
 }

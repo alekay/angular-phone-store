@@ -2,8 +2,8 @@ export interface Product {
   id: number;
   name: string;
   price: number;
-  description?: string;
   // make image optional with ?
+  description?: string;
   imgUrl?: string;
 }
 
