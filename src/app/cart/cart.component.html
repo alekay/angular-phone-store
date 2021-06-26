@@ -1,36 +1,36 @@
 <div class="detailContainer">
-<h3>Cart</h3>
+  <h3>Cart</h3>
 
-<p>
-  <a routerLink="/shipping">Shipping Prices </a> 
-  ///
-  <a href="/" (ngSubmit)="onSubmit()"> Clear Cart</a>
-</p>
+  <p>
+    <a routerLink="/shipping">Shipping Prices </a> 
+    ///
+    <a href="/" (ngSubmit)="onSubmit()" [disabled]="!items.length"> Clear Cart</a>
+  </p>
 
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }} </span>
-  <span>{{ item.price | currency }}</span>
-</div>
-
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
-  <div>
-    <label for="name">
-      Name
-    </label>
-    <input id="name" type="text" formControlName="name">
+  <div class="cart-item" *ngFor="let item of items">
+    <span>{{ item.name }} </span>
+    <span>{{ item.price | currency }}</span>
   </div>
 
-  <div>
-    <label for="address">
-      Address
-    </label>
-    <input id="address" type="text" formControlName="address">
-  </div>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
 
-  <button class="button" type="submit">Purchase</button>
-  <!-- add a home button -->
-  <a class="home" id="home" routerLink="/">Back to Products</a>
+    <div>
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" formControlName="name">
+    </div>
 
-</form>
+    <div>
+      <label for="address">
+        Address
+      </label>
+      <input id="address" type="text" formControlName="address">
+    </div>
+
+    <button class="button" type="submit" [disabled]="!items.length">Purchase</button>
+    <!-- add a home button -->
+    <a class="home" id="home" routerLink="/">Back to Products</a>
+
+  </form>
 </div>
