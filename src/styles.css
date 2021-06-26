@@ -108,12 +108,12 @@ app-top-bar {
 }
 
 .textWrapper {
-  max-width: 300px;
+  max-width: 325px;
 }
 
 .shareButton {
   display: flex;
-  max-width: 100%
+  max-width: 100%;
 }
 
 /* added home button styling */
