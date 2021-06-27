@@ -2,7 +2,7 @@
 
 * {
   font-family: 'Roboto', Arial, sans-serif;
-  color: #616161;
+  color: #fff;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,6 +11,9 @@
 
 body {
   margin: 0;
+  background-image: url("https://i.ibb.co/kG9M9yv/Website-background.png");
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 router-outlet + *  {
@@ -39,7 +42,7 @@ p {
 
 a {
   cursor: pointer;
-  color: #1ca539;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -54,7 +57,7 @@ input {
   border-radius: 2px;
   padding: 8px;
   margin-bottom: 16px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
 }
 
 label {
@@ -78,9 +81,9 @@ app-top-bar {
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #1ca539;
+  background-color: #ef4339;
   color: white;
-  border: 2px solid black
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .container {
@@ -92,16 +95,18 @@ app-top-bar {
 .productContainer {
   display: flex;
   flex-direction: column;
-  border: 2px solid rgba(0, 0, 0, 0.205);
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #21062f;
   border-radius: 10px;
-  margin: 50px;
+  margin: 58px;
   padding: 10px;
 }
 
 .detailContainer {
   display: flex;
   flex-direction: column;
-  border: 2px solid rgba(0, 0, 0, 0.205);
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #21062f;
   border-radius: 10px;
   margin: 100px;
   padding: 20px;
@@ -125,9 +130,8 @@ app-top-bar {
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #FFF;
-  color: #1ca539;;
-  border: 2px solid black
+  color: #ef4339;
+  border: 1px solid #ef4339;
 }
 
 .archerLogo {
@@ -160,12 +164,11 @@ app-top-bar {
 
 .fancy-button {
   background-color: white;
-  color: #1ca539;
-  border: 2px solid black
+  color: #21062f;
 }
 
 .fancy-button i.material-icons {
-  color: #1ca539;
+  color: #21062f;
   padding-right: 4px;
 }
 
@@ -174,7 +177,7 @@ app-top-bar {
 app-top-bar {
   width: 100%;
   height: 68px;
-  background-color: #1ca539;
+  background-color: #21062f;
   padding: 16px;
   display: flex;
   flex-direction: row;
@@ -199,7 +202,8 @@ app-top-bar h1 {
   padding: 16px 20px;
   margin-bottom: 8px;
   border-radius: 2px;
-  background-color: #EEEEEE;
+  border: 1px solid #fff;
+  background-color: #21062f
 }
 
 .imgUrl {
