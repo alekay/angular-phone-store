@@ -83,7 +83,7 @@ app-top-bar {
   cursor: pointer;
   background-color: #ef4339;
   color: white;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #fff;
 }
 
 .container {
@@ -95,7 +95,7 @@ app-top-bar {
 .productContainer {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #fff;
   background-color: #21062f;
   border-radius: 10px;
   margin: 58px;
@@ -163,7 +163,7 @@ app-top-bar {
 /* Fancy Button */
 
 .fancy-button {
-  background-color: white;
+  background-color: #fff;
   color: #21062f;
 }
 
@@ -186,7 +186,7 @@ app-top-bar {
 }
 
 app-top-bar h1 {
-  color: white;
+  color: #fff;
   margin: 0;
 }
 
