@@ -6,7 +6,6 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
 }
 
 body {
@@ -35,7 +34,7 @@ h1, h2 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* Hyperlink */
