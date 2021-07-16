@@ -106,7 +106,7 @@ app-top-bar {
   flex-direction: column;
   border: 1px solid #fff;
   background-color: #21062f;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 100px;
   padding: 20px;
 }
